@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LolliSocials — Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">LS</div>
+      <div>Lolli<span>Socials</span></div>
+    </div>
+
+    <nav>
+      <p class="nav-label">MAIN</p>
+      <a class="nav-item active" href="#dashboard">⌂ <span>Dashboard</span></a>
+      <a class="nav-item" href="#services">◇ <span>Services</span></a>
+      <a class="nav-item" href="#orders">▣ <span>Orders</span></a>
+
+      <p class="nav-label">FINANCE</p>
+      <a class="nav-item" href="#transactions">₦ <span>Transactions</span></a>
+      <a class="nav-item" href="#wallet">↔ <span>Wallet</span></a>
+
+      <p class="nav-label">MANAGEMENT</p>
+      <a class="nav-item" href="#users">○ <span>Users</span></a>
+      <a class="nav-item" href="#support">? <span>Support</span></a>
+      <a class="nav-item" href="#settings">⚙ <span>Settings</span></a>
+    </nav>
+
+    <a class="nav-item logout" href="#">↪ <span>Logout</span></a>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">ADMIN PANEL</div>
+        <h1>Welcome back, Admin 👋</h1>
+      </div>
+      <div class="admin-user">
+        <div class="avatar">A</div>
+        <div><strong>Lolli Admin</strong><small>Administrator</small></div>
+      </div>
+    </header>
+
+    <section id="dashboard" class="content">
+      <div class="stats">
+        <article class="stat-card gradient">
+          <div class="stat-title">Platform Revenue</div>
+          <strong>₦1,284,650</strong>
+          <small>This month</small>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon">↗</div>
+          <small>Total Users</small>
+          <strong>2,458</strong>
+          <span>+12.4% this month</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon">✓</div>
+          <small>Successful Orders</small>
+          <strong>3,842</strong>
+          <span>All time</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon">₦</div>
+          <small>Pending Orders</small>
+          <strong>24</strong>
+          <span>Needs attention</span>
+        </article>
+      </div>
+
+      <section class="panel" id="services">
+        <div class="panel-head">
+          <div>
+            <div class="eyebrow">CATALOG</div>
+            <h2>Categories & Services</h2>
+            <p>Manage what customers see in the LolliSocials marketplace.</p>
+          </div>
+          <button class="primary" onclick="openCategoryModal()">+ New Service Category</button>
+        </div>
+
+        <div id="categoryList" class="category-list"></div>
+      </section>
+
+      <section class="panel" id="orders">
+        <div class="panel-head compact">
+          <div><div class="eyebrow">ACTIVITY</div><h2>Recent Orders</h2></div>
+          <button class="ghost">View all →</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Service</th><th>Customer</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+            <tbody>
+              <tr><td>Airtime</td><td>Lolli User</td><td>₦5,000</td><td><b class="status success">Successful</b></td><td>Oct 1, 2026</td></tr>
+              <tr><td>Instagram Followers</td><td>David</td><td>₦2,500</td><td><b class="status pending">Pending</b></td><td>Oct 1, 2026</td></tr>
+              <tr><td>Netflix Subscription</td><td>Sarah</td><td>₦3,500</td><td><b class="status success">Successful</b></td><td>Sep 30, 2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div id="modalRoot"></div>
+  <script src="admin.js"></script>
+</body>
+</html>

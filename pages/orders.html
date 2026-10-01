@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders — Lolli Socials</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="dashboard-body">
+
+<aside class="sidebar">
+    <div class="sidebar-logo">
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">LS</span>
+            <span>Lolli<span>Socials</span></span>
+        </a>
+    </div>
+
+    <nav class="sidebar-nav">
+        <p class="nav-label">MAIN</p>
+
+        <a href="dashboard.html"><span>⌂</span>Dashboard</a>
+        <a href="services.html"><span>◈</span>Services</a>
+        <a href="orders.html" class="active"><span>▣</span>Orders</a>
+
+        <p class="nav-label">FINANCE</p>
+
+        <a href="wallet.html"><span>₦</span>Wallet</a>
+        <a href="transactions.html"><span>↔</span>Transactions</a>
+
+        <p class="nav-label">ACCOUNT</p>
+
+        <a href="profile.html"><span>◯</span>Profile</a>
+        <a href="support.html"><span>?</span>Support</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="../index.html"><span>↪</span>Logout</a>
+    </div>
+</aside>
+
+
+<main class="dashboard-main">
+
+<header class="dashboard-header">
+
+    <div class="dashboard-title">
+        <span>ORDERS</span>
+        <h1>My Orders</h1>
+    </div>
+
+    <div class="dashboard-actions">
+        <button class="notification-btn">♢<i></i></button>
+
+        <div class="dashboard-profile">
+            <div class="dashboard-avatar">L</div>
+            <div>
+                <b>Lolli User</b>
+                <small>Customer</small>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="dashboard-content">
+
+    <section class="page-intro">
+        <span>ORDER HISTORY</span>
+        <h2>Track your services</h2>
+        <p>View and manage all your Lolli Socials orders.</p>
+    </section>
+
+
+    <div class="orders-toolbar">
+
+        <div class="service-search">
+            <span>⌕</span>
+            <input
+                type="search"
+                id="orderSearch"
+                placeholder="Search orders..."
+            >
+        </div>
+
+        <select class="filter-select" id="orderFilter">
+            <option value="all">All orders</option>
+            <option value="successful">Successful</option>
+            <option value="processing">Processing</option>
+            <option value="failed">Failed</option>
+        </select>
+
+    </div>
+
+
+    <section class="orders-table full-orders">
+
+        <div class="order-row order-heading">
+            <span>Service</span>
+            <span>Order ID</span>
+            <span>Amount</span>
+            <span>Status</span>
+            <span>Date</span>
+        </div>
+
+
+        <div class="order-row order-item" data-status="successful">
+            <span class="order-service">
+                <b>📺</b>
+                Cable TV
+            </span>
+            <span>#LS10284</span>
+            <span>₦4,500</span>
+            <span class="status success">Successful</span>
+            <span>Aug 31, 2026</span>
+        </div>
+
+
+        <div class="order-row order-item" data-status="successful">
+            <span class="order-service">
+                <b>📶</b>
+                Data Bundle
+            </span>
+            <span>#LS10281</span>
+            <span>₦2,000</span>
+            <span class="status success">Successful</span>
+            <span>Aug 30, 2026</span>
+        </div>
+
+
+        <div class="order-row order-item" data-status="processing">
+            <span class="order-service">
+                <b>●</b>
+                Spotify Premium
+            </span>
+            <span>#LS10279</span>
+            <span>₦1,500</span>
+            <span class="status pending">Processing</span>
+            <span>Aug 30, 2026</span>
+        </div>
+
+
+        <div class="order-row order-item" data-status="failed">
+            <span class="order-service">
+                <b>📱</b>
+                Airtime
+            </span>
+            <span>#LS10271</span>
+            <span>₦5,000</span>
+            <span class="status failed">Failed</span>
+            <span>Aug 29, 2026</span>
+        </div>
+
+    </section>
+
+</div>
+
+</main>
+
+<script src="../script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transactions — Lolli Socials</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-circle">LS</div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-label">MAIN</div>
+
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="services.html">
+                <span>◈</span>
+                Services
+            </a>
+
+            <a href="orders.html">
+                <span>▣</span>
+                Orders
+            </a>
+
+            <div class="nav-label">FINANCE</div>
+
+            <a href="wallet.html">
+                <span>₦</span>
+                Wallet
+            </a>
+
+            <a href="transactions.html" class="active">
+                <span>↔</span>
+                Transactions
+            </a>
+
+            <div class="nav-label">ACCOUNT</div>
+
+            <a href="profile.html">
+                <span>◯</span>
+                Profile
+            </a>
+
+            <a href="support.html">
+                <span>?</span>
+                Support
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-title">
+
+                <button class="dashboard-menu">
+                    ☰
+                </button>
+
+                <div>
+                    <h1>Transactions</h1>
+                    <span>View your wallet activity</span>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-profile">
+
+                <div class="profile-mini-avatar">
+                    L
+                </div>
+
+                <div>
+                    <strong>Lollipop</strong>
+                    <small>Customer</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="dashboard-content">
+
+
+            <!-- SUMMARY -->
+
+            <div class="transaction-summary">
+
+                <div class="transaction-summary-card">
+
+                    <span>Total Spent</span>
+
+                    <strong>₦0.00</strong>
+
+                    <small>All time</small>
+
+                </div>
+
+
+                <div class="transaction-summary-card">
+
+                    <span>Money Added</span>
+
+                    <strong>₦0.00</strong>
+
+                    <small>All time</small>
+
+                </div>
+
+
+                <div class="transaction-summary-card">
+
+                    <span>Transactions</span>
+
+                    <strong>0</strong>
+
+                    <small>All time</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRANSACTIONS -->
+
+            <div class="transactions-panel">
+
+                <div class="transactions-header">
+
+                    <div>
+
+                        <h2>Transaction History</h2>
+
+                        <p>
+                            Your recent wallet activity
+                        </p>
+
+                    </div>
+
+
+                    <div class="transaction-controls">
+
+                        <input
+                            type="text"
+                            id="transactionSearch"
+                            placeholder="Search transactions..."
+                        >
+
+                        <select id="transactionFilter">
+
+                            <option value="all">
+                                All
+                            </option>
+
+                            <option value="credit">
+                                Money Added
+                            </option>
+
+                            <option value="debit">
+                                Payments
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TABLE HEADER -->
+
+                <div class="transaction-table-head">
+
+                    <span>Transaction</span>
+
+                    <span>Reference</span>
+
+                    <span>Date</span>
+
+                    <span>Amount</span>
+
+                    <span>Status</span>
+
+                </div>
+
+
+                <!-- DEMO TRANSACTIONS -->
+
+                <div class="transaction-list">
+
+
+                    <div
+                        class="transaction-item"
+                        data-type="credit"
+                    >
+
+                        <div class="transaction-name">
+
+                            <div class="transaction-icon credit">
+                                +
+                            </div>
+
+                            <div>
+                                <strong>Wallet Funding</strong>
+                                <small>Wallet deposit</small>
+                            </div>
+
+                        </div>
+
+                        <span>LS-FUND-10001</span>
+
+                        <span>Aug 31, 2026</span>
+
+                        <strong class="amount-positive">
+                            +₦25,000.00
+                        </strong>
+
+                        <span class="transaction-status success">
+                            Successful
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="transaction-item"
+                        data-type="debit"
+                    >
+
+                        <div class="transaction-name">
+
+                            <div class="transaction-icon debit">
+                                −
+                            </div>
+
+                            <div>
+                                <strong>Netflix Premium</strong>
+                                <small>Service purchase</small>
+                            </div>
+
+                        </div>
+
+                        <span>LS-ORD-10002</span>
+
+                        <span>Aug 31, 2026</span>
+
+                        <strong class="amount-negative">
+                            −₦2,500.00
+                        </strong>
+
+                        <span class="transaction-status success">
+                            Successful
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="transaction-item"
+                        data-type="debit"
+                    >
+
+                        <div class="transaction-name">
+
+                            <div class="transaction-icon debit">
+                                −
+                            </div>
+
+                            <div>
+                                <strong>Data Bundle</strong>
+                                <small>Service purchase</small>
+                            </div>
+
+                        </div>
+
+                        <span>LS-ORD-10003</span>
+
+                        <span>Aug 30, 2026</span>
+
+                        <strong class="amount-negative">
+                            −₦1,500.00
+                        </strong>
+
+                        <span class="transaction-status pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="transactions-empty"
+                    id="transactionsEmpty"
+                >
+
+                    <div>
+                        ↔
+                    </div>
+
+                    <h3>
+                        No transactions found
+                    </h3>
+
+                    <p>
+                        Your wallet transactions will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../script.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const search =
+        document.getElementById("transactionSearch");
+
+    const filter =
+        document.getElementById("transactionFilter");
+
+    const items =
+        document.querySelectorAll(".transaction-item");
+
+    const empty =
+        document.getElementById("transactionsEmpty");
+
+
+    function filterTransactions() {
+
+        const searchValue =
+            search.value.toLowerCase().trim();
+
+        const filterValue =
+            filter.value;
+
+        let visible = 0;
+
+
+        items.forEach(item => {
+
+            const text =
+                item.textContent.toLowerCase();
+
+            const type =
+                item.dataset.type;
+
+
+            const searchMatch =
+                text.includes(searchValue);
+
+            const typeMatch =
+                filterValue === "all" ||
+                filterValue === type;
+
+
+            if (searchMatch && typeMatch) {
+
+                item.style.display = "grid";
+
+                visible++;
+
+            } else {
+
+                item.style.display = "none";
+
+            }
+
+        });
+
+
+        empty.style.display =
+            visible === 0 ? "block" : "none";
+
+    }
+
+
+    search.addEventListener(
+        "input",
+        filterTransactions
+    );
+
+
+    filter.addEventListener(
+        "change",
+        filterTransactions
+    );
+
+});
+
+</script>
+
+</body>
+
+</html>
